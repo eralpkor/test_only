@@ -1,0 +1,100 @@
+/*===> Begin single-event <===*/
+.single-event {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.event-image {
+		position: relative;
+		width: 50%;
+		margin-bottom: 90px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		img {
+			width: 100%;
+			border-radius: 12px;
+		}
+
+		time {
+			position: absolute;
+			top: 20px;
+			left: 35px;
+			z-index: 10;
+			width: 110px;
+			height: 110px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: #fff;
+			border-radius: 12px;
+			font-family: $main_font;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 72px;
+			line-height: 1em;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			color: $main_color;
+
+			span {
+				padding-top: 5px;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 1em;
+				text-align: center;
+				color: $head_color;
+			}
+		}
+	}
+
+	.event-description {
+		width: 50%;
+		margin-bottom: 90px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			strong {
+				color: $head_color;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.event-image {
+			width: 100%;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+		}
+
+		.event-description {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.event-image {
+			margin-bottom: 40px;
+		}
+
+		.event-description {
+			margin-bottom: 30px;
+
+			h2 {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+/*===> End single-event <===*/

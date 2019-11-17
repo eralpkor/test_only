@@ -1,0 +1,28 @@
+/*===> Begin teacher-slider <===*/
+.teacher-slider {
+	margin-right: -15px;
+	margin-left: -15px;
+
+	.teacher-slide {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 25px;
+	}
+
+	.slick-dots {
+		padding-top: 25px;
+	}
+
+	@include breakpoint(small) {
+		.slick-dots {
+			padding-top: 15px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.slick-dots {
+			padding-top: 0;
+		}
+	}
+}
+/*===> Ens teacher-slider <===*/

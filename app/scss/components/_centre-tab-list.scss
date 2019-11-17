@@ -1,0 +1,97 @@
+/*===> Begin centre-tab-list <===*/
+.centre-tab-list,
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 37px;
+
+	li {
+		margin-bottom: 0;
+		margin-right: 60px;
+		padding-left: 0;
+
+		&:first-child {
+			&::after {
+				display: none;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: -30px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 15px;
+			background: $border_dark;
+		}
+
+		a,p {
+			font-family: $head_font;
+			font-weight: 500;
+			font-size: 18px;
+			color: $head_color;
+
+			&.active {
+				color: $main_color;
+			}
+
+			&:hover {
+				color: $hover_color;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		li {
+			margin-right: 40px;
+
+			&::after {
+				left: -20px;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 30px;
+		li {
+			margin-right: 26px;
+
+			&::after {
+				left: -13px;
+			}
+
+			a,p {
+				font-size: 16px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		flex-direction: column;
+		li {
+			margin-right: 0px;
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::after {
+				display: none;
+			}
+
+			a,p {
+				text-align: center;
+			}
+		}
+	}
+}
+/*===> End centre-tab-list <===*/

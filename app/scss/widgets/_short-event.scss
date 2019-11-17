@@ -1,0 +1,71 @@
+/*===> Begin short-event  <===*/
+.short-event {
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+
+	a {
+		display: block;
+		margin-bottom: 10px;
+		font-family: $head_font;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 36px;
+		color: $head_color;
+
+		img {
+			width: 100%;
+			margin-bottom: 10px;
+			border-radius: 12px;
+		}
+	}
+
+	time {
+		display: block;
+		font-size: 14px;
+		color: $main_color;
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 40px;
+
+		a {
+			margin-bottom: 5px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		a {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.related-event-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: -30px;
+
+	.event-slide {
+		width: 25%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@include breakpoint(small) {
+		.event-slide {
+			width: 50%;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		h3 {
+			margin-bottom: 30px;
+		}
+	}
+}
+/*===> End short-event  <===*/

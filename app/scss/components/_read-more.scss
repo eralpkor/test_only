@@ -1,0 +1,32 @@
+/*===> Begin read-more <===*/
+.read-more {
+	position: relative;
+	font-family: $head_font;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	color: $main_color;
+
+	&:hover {
+		color: $hover_color;
+		text-decoration: underline;
+	}
+
+	svg {
+		margin-left: 10px;
+		position: relative;
+		top: -1px;
+		path {
+			fill: $main_color;
+		}
+	}
+
+	&.reverce {
+		svg {
+			margin-left: 0;
+			margin-right: 10px;
+		}
+	}
+}
+/*===> End read-more <===*/

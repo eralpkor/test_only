@@ -1,0 +1,255 @@
+/*===> Begin event-table <===*/
+.event-table {
+	border-collapse: collapse;
+	margin-bottom: 0;
+	thead {
+		tr {
+			td {
+				width: 14.285%;
+				padding: 15px;
+				border-top: 1px solid #DDE7E9;
+				background: $table_color;
+				text-align: center;
+				color: $main_color;
+
+				&:nth-child(1) {
+					border-radius: 12px 0 0 0;
+				}
+
+				&:last-child {
+					border-radius: 0 12px 0 0;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			&:last-child {
+				td {
+					&:nth-child(1) {
+						border-radius: 0 0 0 12px;
+					}
+
+					&:last-child {
+						border-radius: 0 0 12px 0;
+					}
+				}
+			}
+
+			&:nth-child(even) {
+				td {
+					background: $light_color;
+				}
+			}
+
+			td {
+				position: relative;
+				background: #fff;
+				text-align: left;
+				padding: 20px;
+				transition: all .0s;
+
+				&.last-mounth {
+					opacity: .4;
+				}
+
+				&:hover {
+					opacity: 1;
+					background: $table_color;
+					box-shadow: 0px 0px 12px rgba(70, 170, 220, 0.4);
+
+					.hide-event {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+
+				&:nth-child(n+4) {
+					.hide-event {
+						left: auto;
+						right: 50%;
+
+						&::after {
+							content: '';
+							position: absolute;
+							top: 20px;
+							right: auto;
+							left: 100%;
+							z-index: -1;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 16px 0 16px  16px ;
+							border-color: transparent transparent transparent #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	tr {
+		margin-bottom: 0;
+		padding: 0;
+		border-radius: 0;
+		background-color: transparent;
+
+		td {
+			width: 14.285%;
+			border-right: 1px solid #DDE7E9;
+			border-bottom: 1px solid #DDE7E9;
+
+			&:first-child {
+				border-left: 1px solid #DDE7E9;
+			}
+
+			&.currentle-day {
+				.data {
+					color: #fff;
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						z-index: -1;
+						width: 40px;
+						height: 40px;
+						border-radius: 50%;
+						background: $main_color;
+					}
+				}
+			}
+
+			.data {
+				display: inline-block;
+				position: relative;
+				z-index: 2;
+				margin-bottom: 30px;
+				color: $main_color;
+			}
+
+			.table-event {
+				p {
+					font-weight: 500;
+					color: $head_color;
+				}
+			}
+		}
+	}
+
+	.hide-event {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		z-index: 30;
+		width: 388px;
+		background: #FFFFFF;
+		box-shadow: 3px 10px 30px rgba(42, 135, 158, 0.23);
+		border-radius: 12px;
+		padding: 25px 30px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 20px;
+			right: 100%;
+			z-index: -1;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 16px 16px 16px 0;
+			border-color: transparent #fff transparent transparent;
+		}
+
+		.event-title {
+			margin-bottom: 20px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 18px;
+			font-family: $head_font;
+			line-height: 1em;
+			color: $head_color;
+		}
+
+		time {
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		img {
+			margin-bottom: 20px;
+			border-radius: 12px;
+		}
+
+		p {
+			font-family: $main_font;
+			font-weight: 400 !important;
+			color: $text_color !important;
+		}
+	}
+
+	@include breakpoint(small) {
+		min-width: 1000px;
+
+		tr {
+			&:nth-child(n+4) {
+				.hide-event {
+					top: auto;
+					bottom: 20px;
+					&::after {
+						top: auto !important;
+						bottom: 20px !important;
+					}
+				}
+			}
+		}
+
+		.hide-event {
+			width: 200px;
+			.event-img {
+				margin-bottom: 10px;
+				height: 80px;
+
+				a {
+					display: block;
+					height: 100%;
+				}
+
+				img {
+					height: 100%;
+				}
+			}
+
+			.event-title {
+				display: block;
+			}
+		}
+	}
+}
+
+.table-wrap-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	a {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 24px;
+		color: $hover_color;
+	}
+}
+
+@include breakpoint(small) {
+	.event-table-wrap {
+		overflow-x: auto;
+	}
+}
+/*===> End event-table <===*/

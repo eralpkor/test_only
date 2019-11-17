@@ -1,0 +1,31 @@
+/*===> Begin education-slier <===*/
+.education-slier {
+	margin-right: -15px;
+	margin-left: -15px;
+
+	.it-card {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.slick-list {
+		padding-bottom: 25px;
+	}
+
+	.slick-dots {
+		padding-top: 25px;
+	}
+
+	@include breakpoint(small) {
+		.slick-dots {
+			padding-top: 15px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.slick-dots {
+			padding-top: 25px;
+		}
+	}
+}
+/*===> End education-slier <===*/

@@ -1,0 +1,40 @@
+/*===> Begin slick arrow <===*/
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	width: 40px;
+	height: 76px;
+	padding: 0;
+	background: #fff;
+	transform: translateY(-50%);
+	z-index: 10;
+
+	&:hover {
+		background: $main_color;
+
+		i {
+			color: #fff;
+		}
+	}
+
+	i {
+		font-size: 22px;
+		color: $main_color;
+	}
+
+	&.slick-prev {
+		left: 0;
+		border-radius: 0 12px 12px 0;
+	}
+
+	&.slick-next {
+		right: 0;
+		border-radius: 12px -0px 0 12px;
+	}
+
+	@include breakpoint(mobile) {
+		width: 30px;
+		height: 50px;
+	}
+}
+/*===> End slick arrow <===*/

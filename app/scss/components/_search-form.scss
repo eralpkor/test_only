@@ -1,0 +1,28 @@
+/*===> Begin search-form <===*/
+.search-form {
+	display: flex;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #FAFCFC;
+	border: 1.5px solid #DEECEF;
+	box-sizing: border-box;
+	border-radius: 8px;
+
+	input {
+		margin: 0;
+		padding: 16px 0;
+		border: none;
+	}
+
+	button {
+		padding: 0;
+		background-color: transparent;
+		box-shadow: none;
+		color: $head_color;
+
+		&:hover {
+			color: $main_color !important;
+		}
+	}
+}
+/*===> End search-form <===*/

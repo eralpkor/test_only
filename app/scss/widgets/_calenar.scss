@@ -1,0 +1,64 @@
+/*===> Begin calenar <===*/
+.calenar {
+	.now-data,
+	.next-mounth {
+		margin-bottom: 20px;
+		font-family: $main_font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: $main_color;
+	}
+
+	.next-mounth {
+		margin-bottom: 0;
+	}
+
+	table {
+		margin-bottom: 15px;
+		tr {
+			padding-top: 11px;
+			padding-bottom: 11px;
+			border-radius: 8px;
+			line-height: 18px;
+			text-align: center;
+		}
+
+		thead {
+			tr {
+				background: $main_color;
+
+				td, th {
+					color: #fff;
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				padding-top: 4px;
+				padding-bottom: 4px;
+				&:nth-child(odd) {
+					background: $light_color;
+				}
+
+				&:nth-child(even) {
+					background: $table_color;
+				}
+
+				td {
+					padding-top: 8px;
+					padding-bottom: 8px;
+					&.selected {
+						padding-top: 6px;
+						padding-bottom: 6px;
+						background: #fff;
+						border: 2px solid  $main_color;
+						border-radius: 4px;
+					}
+				}
+			}
+		}
+	}
+}
+/*===> End calenar <===*/

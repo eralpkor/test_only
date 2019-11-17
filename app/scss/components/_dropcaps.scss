@@ -1,0 +1,32 @@
+/*===> Begin first letter <===*/
+.f-letter {
+	display: flex;
+	align-items: flex-start;
+
+	&.float {
+		display: block;
+
+		.f-letter-wrap {
+			float: left;
+		}
+	}
+
+	&.fill {
+		.f-letter-wrap {
+			padding: 5px;
+			background: $hover_color;
+			font-size: 42px;
+			color: #fff;
+		}
+	}
+
+	.f-letter-wrap {
+		margin-right: 15px;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 66px;
+		line-height: 1em;
+		color: $hover_color;
+	}
+}
+/*===> End first letter <===*/

@@ -1,0 +1,84 @@
+/*===> Begin text-block <===*/
+.text-block {
+	padding-top: 120px;
+	padding-bottom: 120px;
+
+	&.on-scroll {
+		&.show-scroll {
+			.block-header {
+				* {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			p, a {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.block-header {
+			* {
+				opacity: 0;
+				transform: translateY(50px);
+				transition: all .3s;
+				transition-delay: .12s;
+
+				&:nth-child(1) {
+					transition-delay: .5s;
+				}
+
+				&:nth-child(2) {
+					transition-delay: .7s;
+				}
+			}
+		}
+
+		p {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: all .3s;
+			transition-delay: .8s;
+		}
+
+		a {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: all .3s;
+			transition-delay: 1s;
+		}
+	}
+
+	.svg-block {
+		max-width: 500px;
+
+		&.video-block {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include breakpoint(mobile) {
+			max-width: 214px;
+		}
+	}
+
+	@include breakpoint(medium) {
+		padding-top: 60px;
+	}
+
+	@include breakpoint(small) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	@include breakpoint(extra-small) {
+		padding-top: 40px;
+		&.text-block-reverce {
+			.svg-block {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+/*===> End text-block <===*/

@@ -1,0 +1,16 @@
+/*===> Begin comments-list <===*/
+.comments-list {
+	padding-left: 0;
+
+	.comment-wrap {
+		padding-left: 0;
+		&::after {
+			display: none;
+		}
+	}
+
+	.comments-list {
+		padding-left: 40px;
+	}
+}
+/*===> End comments-list <===*/

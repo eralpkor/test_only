@@ -1,0 +1,27 @@
+/*===> Begin terms-list <===*/
+.terms-list {
+	margin-top: 90px;
+
+	h3 {
+		margin-bottom: 50px;
+	}
+
+	@include breakpoint(small) {
+		h3 {
+			margin-bottom: 40px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		h3 {
+			margin-bottom: 25px;
+		}
+
+		.flex-style {
+			li {
+				width: 100%;
+			}
+		}
+	}
+}
+/*===> End terms-list <===*/

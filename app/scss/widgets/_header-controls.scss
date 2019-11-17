@@ -1,0 +1,37 @@
+/*===> Begin header controls <===*/
+.header-controls {
+	.hamburger {
+		display: none;
+	}
+
+	.header-search {
+		position: relative;
+
+		.search-form {
+			position: absolute;
+			top: 100%;
+			right: -10px;
+			width: 280px;
+			transform: translateY(0px);
+			opacity: 0;
+			visibility: hidden;
+			transition: all .3s;
+
+			&.active {
+				transform: translateY(20px);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		display: flex;
+		align-items: center;
+		.hamburger {
+			display: block;
+			margin-left: 25px;
+		}
+	}
+}
+/*===> End header controls <===*/

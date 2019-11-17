@@ -1,0 +1,408 @@
+/*===> Begin base style <===*/
+body {
+    font-family: $main_font;
+    line-height: 1.5em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+
+    &.active {
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .3;
+        }
+    }
+
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $text_color;
+        opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $text_color;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $text_color;
+    }
+
+    * {
+        outline: none !important;
+    }
+
+    p {
+        margin-bottom: 20px;
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 1.5em;
+        color: $text_color;
+
+        @include breakpoint(small) {
+            font-size: 14px;
+        }
+    }
+
+    h1, .h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-family: $head_font;
+        line-height: 1.1em;
+        color: $head_color;
+    }
+
+    h1, .h1 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 54px;
+
+        @include breakpoint(extra-small) {
+            font-size: 40px;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 34px;
+        }
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 1.3em;
+
+        @include breakpoint(small) {
+            font-size: 34px;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 26px;
+        }
+    }
+
+    h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 1.3em;
+
+        @include breakpoint(extra-small) {
+            font-size: 28px;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 24px;
+        }
+    }
+
+    h4 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 1.3em;
+
+        @include breakpoint(extra-small) {
+            font-size: 18px;
+        }
+    }
+
+    h5 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.3em;
+
+        @include breakpoint(extra-small) {
+            font-size: 16px;
+        }
+    }
+
+    h6 {
+        font-family: $second_font;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: normal;
+        line-height: 1.3em;
+    }
+
+    img {
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        outline: none !important;
+        transition: all .3s;
+
+        &::-moz-focus-inner {
+            border: 0 !important;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $main_color;
+        }
+    }
+
+    blockquote {
+        // background: #FFFFFF;
+        // opacity: 0.8;
+        position: relative;
+        margin-bottom: 25px;
+        padding: 38px 30px 38px 100px;
+        background: rgba(255,255,255, .8);
+        border-radius: 12px;
+
+        &::after {
+            content: '“';
+            position: absolute;
+            top: 25px;
+            left: 80px;
+            transform: translateX(-100%);
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 144px;
+            line-height: 144px;
+            color: $main_color;
+        }
+
+        &.bloquote_bg {
+            background: $bloquote_bg;
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+        
+        p {
+            font-family: $main_font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 1.5em;
+            color: $head_color;
+        }
+
+        @include breakpoint(small) {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    ul {
+        margin-bottom: 0;
+        padding: 0;
+
+        &.flex-style {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: -15px;
+
+            li {
+                padding-left: 40px;
+                width: 50%;
+
+                &::after {
+                    left: 20px;
+                }
+            }
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            list-style: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::after {
+                content: '\f105';
+                position: absolute;
+                top: 0.5em;
+                left: 0;
+                line-height: 1em;
+                font-family: $font_awsome;
+                font-size: 12px;
+                font-weight: 900;
+                color: $main_color;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            a {
+                margin-bottom: 0;
+                font-family: $main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 1.6em;
+                color: $text_color;
+            }
+        }
+
+        @include breakpoint(small) {
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+
+    ol {
+        margin-bottom: 0;
+        padding: 0;
+        counter-reset: myCounter;
+
+        li {
+            list-style-position: inside;
+            list-style: none;
+
+            &::before {
+                content:counter(myCounter, decimal-leading-zero)'.';
+                counter-increment: myCounter;
+                display: inline-block;
+                margin: 5px 10px;
+                font-family: $head_font;
+                font-weight: 500;
+                color: $main_color;
+            }
+        }
+    }
+
+    label {
+        position: relative;
+    }
+
+    .font-family_roboto {
+        font-family: $main_font;
+    }
+
+    .font-family_poppins {
+        font-family: $head_font;
+    }
+
+    .font-family_radley {
+        font-family: $second_font;
+    }
+
+    .main-color-font {
+        color: $main_color;
+    }
+
+    .component_color_1 {
+        color: $component_color_1;
+    }
+
+    .component_color_2 {
+        color: $component_color_2;
+    }
+
+    .component_color_3 {
+        color: $component_color_3;
+    }
+
+    svg.main-color-font {
+        path {
+            color: $main_color;
+        }
+    }
+
+    svg.component_color_1 {
+        path {
+            color: $component_color_1;
+        }
+    }
+
+    svg.component_color_2 {
+        path {
+            color: $component_color_2;
+        }
+    }
+
+    svg.component_color_3 {
+        path {
+            color: $component_color_3;
+        }
+    }
+
+    .svg-block {
+        max-width: 500px;
+    }
+
+    .main-color-font {
+        color: $main_color;
+    }
+
+    .dib {
+        display: inline-block;
+    }
+
+    .gmnoprint {
+        display: none;
+    }
+
+    .gm-control-active {display: none;}
+
+    @include breakpoint(extra-small) {
+        blockquote {
+            padding: 30px 20px 30px 50px;
+
+            &::after {
+                top: 22px;
+                left: 40px;
+                font-size: 80px;
+                line-height: 80px;
+            }
+        }
+    }
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 738px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 776px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+/*===> End base style <===*/

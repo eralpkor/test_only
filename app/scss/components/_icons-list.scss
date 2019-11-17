@@ -1,0 +1,30 @@
+/*===> Begin icons list <===*/
+.icons-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	&.bm-0 {
+		margin-bottom: -25px;
+	}
+
+	.icon {
+		margin-bottom: 25px;
+	}
+
+	.square-icon {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.round-icon {
+		margin-right: 6px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+/*===> End icons list <===*/

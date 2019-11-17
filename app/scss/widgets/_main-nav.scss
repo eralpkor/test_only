@@ -1,0 +1,45 @@
+/*===> Begin main nav <===*/
+.main-nav {
+	.close-nav {
+		display: none;
+		svg {
+			position: relative;
+			width: 30px;
+			path {
+				stroke: black;
+				stroke-width: 2px;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		width: 100%;
+	}
+
+	@include breakpoint(medium) {
+		position: fixed;
+		top: 0;
+		right: -320px;
+		z-index: 1000;
+		height: 100%;
+		width: 320px;
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column-reverse;
+		padding: 10px 20px;
+		background: #fff;
+		overflow: hidden;
+		box-shadow: -1px 0 5px 0 rgba(50,50,50,0.3);
+		transition: all .3s;
+
+		&.active {
+			right: 0;
+		}
+
+		.close-nav {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
+/*===> End main nav <===*/

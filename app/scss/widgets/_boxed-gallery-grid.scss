@@ -1,0 +1,33 @@
+/*===> Begin boxed-gallery-grid <===*/
+.boxed-gallery-grid {
+	margin-left: -15px;
+	margin-right: -15px;
+	.grid-item {
+		width: 25%;
+		margin-bottom: 30px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		img {
+			border-radius: 8px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.grid-item {
+			width: 33.33%;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		margin-left: -7px;
+		margin-right: -7px;
+		.grid-item {
+			width: 50%;
+			margin-bottom: 15px;
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+	}
+}
+/*===> End boxed-gallery-grid <===*/

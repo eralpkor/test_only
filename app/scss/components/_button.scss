@@ -1,0 +1,75 @@
+/*===> Begin button <===*/
+button,
+.button {
+	padding: 17px 20px;
+	background: $main_color;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 6px 12px rgba(3, 109, 136, 0.14);
+	text-align: center;
+	line-height: 1;
+	transition: all .3s;
+	color: #fff;
+
+	&.color-2 {
+		background: $component_color_1;
+
+		&:hover {
+			background: #fff;
+			color: $component_color_1 !important;
+		}
+	}
+
+	&.color-3 {
+		background: $component_color_2;
+
+		&:hover {
+			background: #fff;
+			color: $component_color_2 !important;
+		}
+	}
+	
+	&:hover {
+		background: #fff;
+		color: $main_color !important;
+
+		&.read-more {
+			svg {
+				path {
+					fill: $main_color;
+				}
+			}
+		}
+
+		svg {
+			path {
+				fill: $main_color;
+			}
+		}
+	}
+
+	&.read-more {
+		color: #fff;
+
+		svg {
+			margin-left: 10px;
+
+			path {
+				fill: #fff;
+			}
+		}
+	}
+
+	svg {
+		margin-left: 10px;
+
+		path {
+			fill: #fff;
+		}
+	}
+
+	img {
+		min-width: 9px;
+	}
+}
+/*===> End button <===*/

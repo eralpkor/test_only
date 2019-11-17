@@ -1,0 +1,55 @@
+/*===> Begin tab-values <===*/
+.tab-values {
+	.tab-values__img {
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 12px;
+		max-width: 580px;
+
+		img {
+			width: 100%;
+			border-radius: 12px;
+		}
+	}
+
+	.tab-values__description {
+		p {
+			strong {
+				color: $head_color;
+			}
+		}
+
+		ul {
+			li {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		.tab-values__img {
+			margin-bottom: 50px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.tab-values__img {
+			margin-bottom: 40px;
+		}
+
+		.tab-values__description {
+			ul {
+				li {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.tab-values__img {
+			margin-bottom: 30px;
+		}
+	}
+}
+/*===> End tab-values <===*/

@@ -1,0 +1,40 @@
+/*===> Begin up-btn <===*/
+.up-btn {
+	position: fixed;
+	bottom: -100px;
+	right: 30px;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	background: $main_color;
+	box-shadow: 0px 6px 12px rgba(3, 109, 136, 0.14);
+	cursor: pointer;
+	opacity: 0;
+	transition: all .3s;
+
+	&:hover {
+		background: #fff;
+
+		svg {
+			path {
+				fill: $main_color;
+			}
+		}
+	}
+
+	&.show-up {
+		bottom: 50px;
+		opacity: 1;
+	}
+
+	svg {
+		path {
+			fill: #fff;
+		}
+	}
+}
+/*===> End up-btn <===*/

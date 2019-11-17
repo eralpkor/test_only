@@ -1,0 +1,26 @@
+.r-cloud {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 15%;
+		width: 327px;
+		height: 141px;
+		background: url(../img/cloud.svg);
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+
+	@include breakpoint(small) {
+		&::after {
+			display: none;
+		}
+	}
+}

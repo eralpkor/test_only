@@ -1,0 +1,81 @@
+/*===> Begin testimonial-block <===*/
+.testimonial-block {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 60px;
+	padding: 45px 30px 30px;
+	background: #fff;
+	border: 4px solid $border_testimonial_1;
+	border-radius: 12px;
+	box-shadow: 0px 14px 22px rgba(42, 135, 158, 0.14);
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 40px 40px 0;
+		border-color: transparent $border_testimonial_1 transparent transparent;
+		transform: translate(0, 100%) skew(5deg);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 30px 30px 0;
+		border-color: transparent #fff transparent transparent;
+		transform: translate(5px, 100%) skew(5deg);
+	}
+
+	.testimonial-img {
+		margin-bottom: 30px;
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.testimonial-description {
+		h5 {
+			margin-bottom: 15px;
+			text-align: center;
+		}
+
+		time {
+			display: block;
+			margin-bottom: 14px;
+			font-size: 14px;
+			text-align: center;
+			color: $main_color;
+		}
+
+		p {
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
+
+	@include breakpoint(small) {
+		padding: 40px 30px 35px;
+	}
+
+	@include breakpoint(mobile) {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+}
+/*===> End testimonial-block <===*/

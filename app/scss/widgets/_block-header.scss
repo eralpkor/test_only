@@ -1,0 +1,57 @@
+/*===> Begin block-header <===*/
+.block-header {
+	p {
+		position: relative;
+		padding-left: 60px;
+		font-family: $second_font;
+		font-style: italic;
+		font-weight: normal;
+		font-size: 22px;
+		color: $head_color;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 12px;
+			left: 0;
+			margin-top: -2px;
+			width: 40px;
+			height: 3px;
+			background: $main_color;
+		}
+	}
+
+	h2 {
+		font-family: $head_font;
+		font-style: normal;
+		font-weight: 500;
+
+		span {
+			color: $main_color;
+		}
+	}
+
+	@include breakpoint(small) {
+		p {
+			padding-left: 50px;
+			font-size: 18px;
+
+			&::after {
+				width: 30px;
+				height: 2px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		p {
+			padding-left: 40px;
+			font-size: 16px;
+
+			&::after {
+				width: 25px;
+			}
+		}
+	}
+}
+/*===> End block-header <===*/

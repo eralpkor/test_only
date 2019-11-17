@@ -1,0 +1,42 @@
+/*===> Begin on-scroll animate <===*/
+.on-scroll {
+
+	&.show-scroll {
+		&.fade-left {
+			transform: translateX(0) scale(1);
+			opacity: 1;
+		}
+
+		&.fade-right {
+			transform: translateX(0) scale(1);
+			opacity: 1;
+		}
+
+		&.fade-up {
+			transform: translateY(0) scale(1);
+			opacity: 1;
+		}
+	}
+
+	&.fade-left {
+		transform: translateX(-150px) scale(.8);
+		transition-timing-function: ease-out;
+		opacity: 0;
+		transition: all .6s;
+	}
+
+	&.fade-right {
+		transform: translateX(150px) scale(.8);
+		transition-timing-function: ease-out;
+		opacity: 0;
+		transition: all .6s;
+	}
+
+	&.fade-up {
+		transform: translateY(50px);
+		transition-timing-function: ease-out;
+		opacity: 0;
+		transition: all .4s;
+	}
+}
+/*===> End on-scroll animate <===*/

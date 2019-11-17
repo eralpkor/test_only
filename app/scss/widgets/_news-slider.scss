@@ -1,0 +1,28 @@
+/*===> Begin news-slider <===*/
+.news-slider {
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.news-slider__card {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 25px;
+	}
+
+	.slick-dots {
+		padding-top: 25px;
+	}
+
+	@include breakpoint(small) {
+		.slick-dots {
+			padding-top: 15px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.slick-dots {
+			padding-top: 15px;
+		}
+	}
+}
+/*===> End news-slider <===*/

@@ -1,0 +1,49 @@
+/*===> Begin pricing-packages-slider <===*/
+.pricing-packages-slider {
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.pricing-packages-slide {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 25px;
+		min-width: 33.33%;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			padding-top: 22px;
+		}
+	}
+
+	.slick-dots {
+		padding-top: 25px;
+		display: none;
+	}
+
+	@include breakpoint(medium) {
+		.slick-track {
+			display: -webkit-flex !important;
+			display: -moz-flex !important;
+			display: -ms-flex !important;
+			display: -o-flex !important;
+			display: flex !important;
+		}
+
+		.pricing-packages-slide {
+			height: 100%;
+			// padding-bottom: 0;
+			&:nth-child(1),
+			&:nth-child(3) {
+				padding-top: 0;
+			}
+		}
+
+		.slick-dots {
+			display: flex;
+			margin-bottom: 20px;
+			padding-top: 12px;
+		}
+	}
+
+}
+/*===> End pricing-packages-slider <===*/

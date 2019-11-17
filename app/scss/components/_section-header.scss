@@ -1,0 +1,85 @@
+/*===> Begin section header <===*/
+.section-header {
+	position: relative;
+	z-index: 10;
+	max-width: 730px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 45px;
+	text-align: center;
+
+	&.on-scroll {
+		&.show-scroll {
+			.h-sub, .h-desc, h2, p {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.h-sub, .h-desc, h2, p {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: all .3s;
+		}
+
+		.h-sub {
+			transition-delay: 0s;
+		}
+
+		h2 {
+			transition-delay: .25s;
+		}
+
+		p {
+			transition-delay: .5s;
+		}
+	}
+
+	.h-sub {
+		margin-bottom: 8px;
+		font-family: $second_font;
+		font-style: italic;
+		font-weight: normal;
+		font-size: 21px;
+		line-height: 1.28em;
+		color: $hover_color;
+	}
+
+	.h-desc {
+		margin-bottom: 37px;
+		font-family: $main_font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 27px;
+		color: $text_color;
+	}
+
+	h2 {
+		margin-bottom: 31px;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 35px;
+		.h-sub {
+			font-size: 18px;
+		}
+
+		.h-desc {
+			margin-bottom: 30px;
+		}
+
+		h2 {
+			margin-bottom: 25px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.h-sub {
+			font-size: 16px;
+		}
+	}
+}
+/*===> End section header <===*/

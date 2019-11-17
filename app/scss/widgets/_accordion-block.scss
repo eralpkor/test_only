@@ -1,0 +1,78 @@
+/*===> Begin accordion-block <===*/
+.accordion-block {
+	padding-bottom: 30px;
+
+	&.faq-to-hide {
+		display: none;
+	}
+
+	&.active {
+		.accordion-header {
+			.accordion-ico {
+				&::after {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+
+	.accordion-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 15px;
+		padding-right: 10px;
+		border-bottom: 1px solid $border_color;
+		cursor: pointer;
+
+		.accordion-ico {
+			position: relative;
+			width: 15px;
+			height: 15px;
+
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				background: $main_color;
+				transition: all .3s;
+			}
+
+			&::before {
+				top: 8px;
+				left: 1px;
+				width: 15px;
+				height: 1px;
+			}
+
+			&::after {
+				top: 1px;
+				left: 8px;
+				width: 1px;
+				height: 15px;
+
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+			font-family: $head_font;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			color: $head_color;
+		}
+	}
+
+	.accordion-content {
+		display: none;
+		padding-top: 30px;
+		padding-bottom: 20px;
+
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+/*===> End accordion-block <===*/

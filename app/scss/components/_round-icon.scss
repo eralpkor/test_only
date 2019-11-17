@@ -1,0 +1,33 @@
+/*===> Begin round icon <===*/
+.round-icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 140px;
+	height: 140px;
+	background: #EAF5F7;
+	border: 8px solid #FFFFFF;
+	border-radius: 50%;
+	transition: all .3s;
+
+	&:hover {
+		box-shadow: 0px 10px 22px rgba(42, 158, 121, 0.14);
+	}
+
+	img {
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-family: $head_font;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 24px;
+		text-align: center;
+		color: $head_color;
+	}
+}
+/*===> End round icon <===*/

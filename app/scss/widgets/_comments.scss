@@ -1,0 +1,21 @@
+/*===> Begin comments <===*/
+.comments {
+	margin-bottom: 90px;
+
+	h4 {
+		margin-bottom: 40px;
+		span {
+			font-size: 18px;
+			color: $main_color;
+		}
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 70px;
+	}
+
+	@include breakpoint(extra-small) {
+		margin-bottom: 50px;
+	}
+}
+/*===> End comments <===*/

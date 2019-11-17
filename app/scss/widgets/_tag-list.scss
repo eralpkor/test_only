@@ -1,0 +1,32 @@
+/*===> Begin tag-list <===*/
+.tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -5px;
+	margin-right: -5px;
+
+	li {
+		margin-bottom: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+
+		&::after{
+			display: none;
+		}
+
+		a {
+			margin: 0;
+			border: 1px solid #DEECEF;
+			border-radius: 8px;
+			padding: 8px 15px;
+			text-align: center;
+
+			&:hover,
+			&.active {
+				background: $hover_color;
+				color: #fff;
+			}
+		}
+	}
+}
+/*===> End tag-list <===*/

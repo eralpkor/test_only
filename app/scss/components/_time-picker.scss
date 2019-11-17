@@ -1,0 +1,17 @@
+/*===> Begin time picker <===*/
+.time-picker {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		transform: translateY(-50%);
+	}
+
+	input {
+		margin-bottom: 0;
+		padding-right: 25px;
+	}
+}
+/*===> End time picker <===*/

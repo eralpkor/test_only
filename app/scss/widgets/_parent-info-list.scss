@@ -1,0 +1,25 @@
+/*===> Begin parent-info-list <===*/
+.parent-info-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	li {
+		width: 50%;
+		margin-bottom: 30px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	@include breakpoint(small) {
+		li {
+			width: 100%;
+		}
+	}
+}
+/*===> End parent-info-list <===*/

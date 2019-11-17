@@ -1,0 +1,24 @@
+/*===> Begin calendar table <===*/
+.calendar-table {
+	thead {
+		tr {
+			padding: 10px 15px;
+
+			&:first-child {
+				display: flex;
+
+				th {
+					&:nth-child(2) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	tr {
+		margin-bottom: 2px;
+		padding: 5px 15px;
+	}
+}
+/*===> End calendar table <===*/

@@ -1,0 +1,152 @@
+/*===> Begin video-btn <===*/
+.video-btn {
+	display: flex;
+	align-items: center;
+	font-family: $head_font;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	color: $main_color;
+
+	&:hover {
+		text-decoration: underline;
+		color: $hover_color;
+	}
+
+
+
+	.play-ico {
+		margin-right: 13px;
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background: $main_color;
+		}
+
+		&.x2 {
+			img {
+				height: 16px;
+			}
+		}
+
+		
+
+		&.animate {
+			position: relative;
+			z-index: 10;
+			&::before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80%;
+				z-index: 1;
+				height: 80%;
+				border-radius: 50%;
+				background: $main_color;
+				opacity: 1;
+				transform: translate(-50%, -50%);
+				z-index: -1;
+				transition: all .3s;
+				animation: pulseElem 1s infinite linear;
+			}
+
+			&::before {
+				width: 120%;
+				height: 120%;
+			}
+
+			span {
+				position: relative;
+				z-index: 10;
+			}
+
+			.play-ico {
+				position: relative;
+				z-index: 10;
+				margin: 0;
+
+				
+			}
+		}
+
+		img {
+			height: 16px;
+			margin-right: -4px;
+			filter: brightness(0) invert(1) !important;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.play-ico {
+			&.animate {
+				position: relative;
+				z-index: 10;
+				&::before{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes pulseElem {
+	0% {
+		width: 80%;
+		height: 80%;
+		opacity: 1;
+	}
+	
+	100% {
+		width: 150%;
+		height: 150%;
+		opacity: 0;
+	}
+}
+@-o-keyframes pulseElem {
+	0% {
+		width: 80%;
+		height: 80%;
+	}
+	50% {
+		width: 120%;
+		height: 120%;
+	}
+	100% {
+		width: 80%;
+		height: 80%;
+	}
+}
+@-moz-keyframes pulseElem {
+	0% {
+		width: 80%;
+		height: 80%;
+	}
+	50% {
+		width: 120%;
+		height: 120%;
+	}
+	100% {
+		width: 80%;
+		height: 80%;
+	}
+}
+@keyframes pulseElem {
+	0% {
+		width: 80%;
+		height: 80%;
+		opacity: 1;
+	}
+	
+	100% {
+		width: 150%;
+		height: 150%;
+		opacity: 0;
+	}
+}
+/*===> End video-btn <===*/

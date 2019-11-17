@@ -1,0 +1,39 @@
+/*===> Begin side-post <===*/
+.side-post {
+	display: flex;
+	margin-bottom: 25px;
+	.post-image {
+		width: 80px;
+		min-width: 80px;
+		margin-right: 20px;
+		img {
+			border-radius: 8px;
+		}
+	}
+
+	.post-meta {
+		display: block;
+		margin-bottom: 5px;
+		font-size: 14px;
+		color: $main_color;
+	}
+
+	.post-title {
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		color: $head_color;
+
+		&:hover {
+			color: $hover_color;
+		}
+	}
+
+	@include breakpoint(small) {
+		.post-title {
+			font-size: 16px;
+		}
+	}
+}
+/*===> End side-post <===*/

@@ -1,0 +1,106 @@
+/*===> Begin table <===*/
+table {
+	display: block;
+	margin-bottom: 50px;
+
+	&.adaptive {
+		min-width: 650px;
+	}
+
+	&.pricing-table {
+		thead, tbody, tfoot {
+			td {
+				width: auto;
+			}
+
+			td:nth-child(1) {
+				width: 40%;
+			}
+		}
+	}
+
+	thead, tbody, tfoot {
+		display: block;
+		width: 100%;
+	}
+
+	thead {
+		tr {
+			background: $table_color;
+
+			td, th {
+				width: 100%;
+				font-family: $main_font;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 15px;
+				color: $head_color;
+			}
+		}
+	}
+
+	tr {
+		display: flex;
+		padding: 15px 20px;
+		border-radius: 12px;
+		margin-bottom: 5px;
+		background: $light_color;
+
+		td {
+			width: 100%;
+			flex-grow: 1;
+			font-family: $main_font;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			text-align: center;
+			color: $text_color;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+	    
+	    thead {
+	    	tr {
+	    		td, th {
+	    			display: flex;
+	    			align-items: center;
+	    			font-size: 14px;
+	    		}
+	    	}
+	    }
+
+	    tr {
+	    	td {
+	    		font-size: 14px;
+	    	}
+	    }
+	}
+}
+
+.table-wrap {
+	overflow: auto;
+}
+
+.pricing-table {
+	thead {
+		tr {
+			td, th {
+				text-align: center;
+
+				&:not(:first-child) {
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+/*===> End table <===*/

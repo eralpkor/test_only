@@ -1,0 +1,10 @@
+/*===> Begin food-section <===*/
+.food-section {
+	@include breakpoint(extra-small) {
+		.svg-block {
+			max-width: 310px;
+			margin-top: 40px;
+		}
+	}
+}
+/*===> End food-section <===*/

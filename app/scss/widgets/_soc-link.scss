@@ -1,0 +1,59 @@
+/*===> Begin soc link <===*/
+.soc-link {
+	display: flex;
+
+	&.soc-link__bg {
+		li {
+			a {
+				background: $main_color_light;
+			}
+		}
+	}
+
+	li {
+		margin-bottom: 0;
+		margin-right: 5px;
+		padding-left: 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			background: #FFFFFF;
+			box-shadow: 0px 6px 12px rgba(3, 109, 136, 0.14);
+
+			&:hover {
+				background: $main_color;
+
+				img {
+					filter: brightness(0) invert(1);
+				}
+
+				path {
+					fill: #fff;
+				}
+
+				i {
+					color: #fff;
+				}
+			}
+
+			svg, img {
+				height: 18px;
+				width: 18px;
+			}
+		}
+	}
+}
+/*===> End soc link <===*/

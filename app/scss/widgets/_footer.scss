@@ -1,0 +1,140 @@
+/*===> Begin footer <===*/
+footer {
+	position: relative;
+
+	.footer-top {
+		position: relative;
+		min-height: 500px;
+		padding: 130px 0;
+		background-position: center center;
+		background-size: cover;
+
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		.logo {
+			margin-bottom: 30px;
+
+			&+p {
+				max-width: 320px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	h4 {
+		margin-bottom: 30px;
+	}
+
+	.footer-bottom-wrap {
+		background: #fff;
+		padding: 25px 0;
+
+		p {
+			margin-bottom: 0;
+
+			a {
+				color: inherit;
+
+				&:hover {
+					color: $main_color;
+				}
+			}
+		}
+
+		.footer-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.soc-link-wrap {
+				display: flex;
+				align-items: center;
+
+				p {
+					margin-bottom: 0;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.footer-top {
+			padding: 80px 0 50px;
+			background: url(../img/tablet_footer.svg) !important;
+			background-size: cover !important;
+			background-repeat: no-repeat;
+		}
+
+		.f-nav {
+			li {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.f-subscribe, .f-nav {
+			margin-bottom: 40px;
+		}
+
+		.f-subscribe {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.logo+p {
+				text-align: center;
+				max-width: 510px;
+				margin-bottom: 40px;
+			}
+		}
+
+		.footer-bottom-wrap {
+			.footer-bottom {
+				flex-direction: column;
+
+				p {
+					text-align: center;
+				}
+
+				.soc-link-wrap {
+					margin-top: 15px;
+					p {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.footer-top {
+			padding-top: 110px;
+			padding-bottom: 80px;
+		}
+
+		h4 {
+			margin-bottom: 20px;
+		}
+
+		.f-nav {
+			margin-bottom: 30px;
+
+			li {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.signup-form {
+			max-width: none;
+			width: 100%;
+		}
+	}
+}
+/*===> End footer <===*/

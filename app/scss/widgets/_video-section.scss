@@ -1,0 +1,25 @@
+/*===> Begin video-section <===*/
+.video-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 676px;
+	background-position: center center;
+
+	@include breakpoint(small) {
+		height: 496px;
+		background-size: auto 100%;
+
+		p {
+			max-width: 400px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		height: 481px;
+		p {
+			max-width: 240px;
+		}
+	}
+}
+/*===> End video-section <===*/

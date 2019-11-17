@@ -1,0 +1,93 @@
+/*===> Begin blog-post-nav <===*/
+.post-navigate {
+	display: flex;
+	justify-content: space-between;
+
+	@include breakpoint(small) {
+		flex-direction: column-reverse;
+		align-items: center;
+
+		.blog-post-nav {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.blog-post-nav {
+	display: flex;
+	max-width: 270px;
+
+	&.post-next {
+		flex-direction: row-reverse;
+
+		.post-image {
+			margin-right: 0;
+			margin-left: 20px;
+		}
+
+		.blog-nav-link {
+			flex-direction: row-reverse;
+
+			img {
+				margin-right: 0;
+				margin-left: 15px;
+				transform: rotateY(180deg);
+			}
+		}
+
+		.post-title {
+			text-align: right;
+		}
+	}
+
+	a {
+		display: block;
+	}
+
+	.post-image {
+		width: 80px;
+		min-width: 80px;
+		height: 80px;
+		margin-right: 20px;
+
+		img {
+			border-radius: 8px;
+		}
+	}
+
+	.blog-nav-link {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		font-size: 15px;
+		color: $text_color;
+
+		&:hover {
+			color: $main_color;
+		}
+
+		img {
+			margin-right: 15px;
+		}
+	}
+
+	.post-title {
+		margin: 0;
+		font-size: 18px;
+	}
+
+	@include breakpoint(small) {
+		&.post-prev {
+			margin-bottom: 0;
+		}
+
+		.blog-nav-link {
+	    	font-size: 14px;
+		}
+
+		.post-title {
+			font-size: 15px;
+		}
+	}
+}
+/*===> End blog-post-nav <===*/

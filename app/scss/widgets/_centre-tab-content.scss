@@ -1,0 +1,54 @@
+/*===> Begin centre-tab-content <===*/
+.centre-tab-content {
+	position: relative;
+	z-index: 10;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all .5s;
+	&.active {
+		height: auto;
+		overflow: visible;
+		opacity: 1;
+	}
+
+	.tab-head {
+		max-width: 740px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	@include breakpoint(small) {
+		.tab-head {
+			margin-bottom: 40px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.tab-head {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.centre-tabs-wrap {
+	position: relative;
+}
+
+.centre-information-section {
+	position: relative;
+	z-index: 10;
+
+	.container {
+		position: relative;
+		z-index: 10;
+
+		.my-paroller {
+			position: absolute;
+			margin-left: -100px;
+		}
+	}
+}
+/*===> End centre-tab-content <===*/

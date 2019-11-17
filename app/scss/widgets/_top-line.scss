@@ -1,0 +1,24 @@
+/*===> Begin top line <===*/
+.top-line {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include breakpoint(medium) {
+		flex-wrap: wrap;
+
+		.logo {
+			order: 0;
+		}
+
+		.main-nav {
+			order: 2;
+		}
+
+		.header-controls {
+			order: 1;
+		}
+	}
+
+}
+/*===> End top line <===*/

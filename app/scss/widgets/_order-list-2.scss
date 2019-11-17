@@ -1,0 +1,59 @@
+/*===> Begin order-list-2 <===*/
+.order-list-2 {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	margin-bottom: -30px;
+
+	li {
+		width: 33.33%;
+		margin-bottom: 30px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&::before {
+			display: none;
+		}
+
+		.list-description {
+			position: relative;
+			padding: 30px 30px 30px 80px;
+			background: #fff;
+			box-shadow: 0px 14px 22px rgba(42, 135, 158, 0.14);
+			border-radius: 12px;
+
+			&::before {
+				content:counter(myCounter, decimal-leading-zero)'.';
+                counter-increment: myCounter;
+                position: absolute;
+                top: 25px;
+                left: 20px;
+                display: inline-block;
+                margin: 5px 10px;
+                font-family: $head_font;
+                font-weight: 500;
+                font-size: 32px;
+                color: $main_color;
+			}
+
+			p {
+				margin-bottom: 0;
+				// letter-spacing: .2px;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		li {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 550px) {
+		li {
+			width: 100%;
+		}
+	}
+}
+/*===> End order-list-2 <===*/
